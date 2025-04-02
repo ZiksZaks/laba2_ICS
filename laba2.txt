@@ -1,0 +1,6 @@
+shift_left(List, N, X) :-
+    length(List, Len),
+    N1 is N mod Len,  
+    append(Front, Back, List),
+    length(Front, N1),
+    append(Back, Front, X).
